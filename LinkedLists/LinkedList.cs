@@ -15,7 +15,7 @@ namespace LinkedLists
             this.head = null;
             this.tail = null;
         }
-        public void CreateNode(Node node)
+        public void AddNode(Node node)
         {
             if (head == null && tail == null)
             {
@@ -28,7 +28,6 @@ namespace LinkedLists
                 node.next = head;
                 head = node;
             }
-
         }
         public void Display()
         {
