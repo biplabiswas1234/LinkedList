@@ -15,19 +15,26 @@ namespace LinkedLists
             this.head = null;
             this.tail = null;
         }
-        public void AddNode(Node node)
+        public void Append(int data)
         {
-            if (head == null && tail == null)
+            //create new node
+            Node node = new Node(data);
+            //check if list is empty then node becomes as head
+            if (this.head == null)
             {
-                head = node;
-                tail = node;
+                this.head = node;
             }
             else
             {
-                //if node then add new node as head
-                node.next = head;
-                head = node;
+                //if not then put head in temp variable
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
             }
+            Console.WriteLine("Added at start of the LinkedList is " + data);
         }
         public void Display()
         {

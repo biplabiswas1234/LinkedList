@@ -8,12 +8,10 @@ namespace LinkedLists
         {
             Console.WriteLine("Welcome to Linked List");
             LinkedList list = new LinkedList();
-            Node node1 = new Node(70);
-            Node node2 = new Node(30);
-            Node node3 = new Node(56);
-            list.AddNode(node1);
-            list.AddNode(node2);
-            list.AddNode(node3);
+            Console.WriteLine("Append the list");
+            list.Append(56);
+            list.Append(30);
+            list.Append(70);
             list.Display();
         }
     }
