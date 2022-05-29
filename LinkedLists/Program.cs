@@ -20,8 +20,11 @@ namespace LinkedLists
             }
             else
             {
-                Console.WriteLine("Node doesn't exists");
+                Console.WriteLine("\nNode doesn't exists");
             }
+            list.Display();
+            Console.WriteLine("\nInsert a node 40.");
+            list.AddNodeAfterNode(40, 30);
             list.Display();
         }
     }
