@@ -36,6 +36,30 @@ namespace LinkedLists
             }
             Console.WriteLine("Added at start of the LinkedList is " + data);
         }
+        public void AddNodeAfterNode(int nodedata, int addAfterthatValue)
+        {
+            //  create new node which we r going to add
+            Node newNode = new Node(nodedata);
+            if (head == null)
+            {
+                head = newNode;
+            }
+            else
+            {
+                Node temp = head;
+                // checking until temp variable data equal to previous value of value to be added
+                while (temp.data != addAfterthatValue)
+                {
+                    //for traversing through list
+                    temp = temp.next;
+                }
+                //new node stores next node position
+                newNode.next = temp.next;
+                //new node location will be previous node next position
+                temp.next = newNode;
+            }
+            Console.WriteLine("\nAdded node in between: " + nodedata);
+        }
         public void Display()
         {
             //temp variable will be head
