@@ -13,8 +13,8 @@ namespace LinkedLists
             list.Append(30);
             list.Append(70);
             list.Display();
-            Console.WriteLine("\nDelete the first node");
-            list.DeleteFirstNode();
+            Console.WriteLine("\nDelete the last node");
+            list.DeleteLastNode();
             list.Display();
         }
     }

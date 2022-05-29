@@ -36,20 +36,23 @@ namespace LinkedLists
             }
             Console.WriteLine("Added node to the LinkedList : " + data);
         }
-
-        public void DeleteFirstNode()
+        public void DeleteLastNode()
         {
             //check if list is empty or not
             if (this.head == null)
             {
                 Console.WriteLine("Linked list is empty");
             }
-            //put temp variable become head in list
+            //temp variable will become head of the list now
             Node temp = this.head;
-            //change head to next node to delete previous node
-            this.head = this.head.next;
-
-            Console.WriteLine("\nRemoved from the linkedlist :" + temp.data);
+            //check until temp next nodes's next location is null
+            while (temp.next.next != null)
+            {
+                temp = temp.next;
+            }
+            //after getting this node change its location to null
+            temp.next = null;
+            Console.WriteLine("\n");
         }
         public void Display()
         {
