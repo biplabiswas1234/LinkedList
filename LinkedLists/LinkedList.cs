@@ -34,31 +34,22 @@ namespace LinkedLists
                 }
                 temp.next = node;
             }
-            Console.WriteLine("Added at start of the LinkedList is " + data);
+            Console.WriteLine("Added node to the LinkedList : " + data);
         }
-        public void AddNodeAfterNode(int nodedata, int addAfterthatValue)
+
+        public void DeleteFirstNode()
         {
-            //  create new node which we r going to add
-            Node newNode = new Node(nodedata);
-            if (head == null)
+            //check if list is empty or not
+            if (this.head == null)
             {
-                head = newNode;
+                Console.WriteLine("Linked list is empty");
             }
-            else
-            {
-                Node temp = head;
-                // checking until temp variable data equal to previous value of value to be added
-                while (temp.data != addAfterthatValue)
-                {
-                    //for traversing through list
-                    temp = temp.next;
-                }
-                //new node stores next node position
-                newNode.next = temp.next;
-                //new node location will be previous node next position
-                temp.next = newNode;
-            }
-            Console.WriteLine("\nAdded node in between: " + nodedata);
+            //put temp variable become head in list
+            Node temp = this.head;
+            //change head to next node to delete previous node
+            this.head = this.head.next;
+
+            Console.WriteLine("\nRemoved from the linkedlist :" + temp.data);
         }
         public void Display()
         {
