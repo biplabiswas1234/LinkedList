@@ -36,23 +36,21 @@ namespace LinkedLists
             }
             Console.WriteLine("Added node to the LinkedList : " + data);
         }
-        public void DeleteLastNode()
+        public bool Search(int data)
         {
-            //check if list is empty or not
-            if (this.head == null)
-            {
-                Console.WriteLine("Linked list is empty");
-            }
-            //temp variable will become head of the list now
+            //temp variable is head now
             Node temp = this.head;
-            //check until temp next nodes's next location is null
-            while (temp.next.next != null)
+            //check until temp location will null
+            while (temp != null)
             {
+                //if temp node data is equal to value to be searched
+                if (temp.data == data)
+                {
+                    return true;
+                }
                 temp = temp.next;
             }
-            //after getting this node change its location to null
-            temp.next = null;
-            Console.WriteLine("\n");
+            return false;
         }
         public void Display()
         {
