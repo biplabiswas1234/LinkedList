@@ -26,6 +26,18 @@ namespace LinkedLists
             Console.WriteLine("\nInsert a node 40.");
             list.AddNodeAfterNode(40, 30);
             list.Display();
+            Console.WriteLine("\nSearch for Node 40");
+            if (list.Search(40))
+            {
+                Console.WriteLine("Node Found");
+            }
+            else
+            {
+                Console.WriteLine("\nNode doesn't exists");
+            }
+            Console.WriteLine("Remove Node 40");
+            list.DeleteSpecificNode();
+            list.Display();
         }
     }
 }
